@@ -1,0 +1,20 @@
+{
+  "name": "text-to-wallpaper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron --ozone-platform-hint=auto --enable-features=WaylandWindowDecorations .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^42.0.1"
+  },
+  "dependencies": {
+    "wallpaper": "^7.3.1"
+  }
+}

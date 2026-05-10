@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Text to Wallpaper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;700&family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Text to Wallpaper</h1>
+            <div class="mode-toggle">
+                <button id="mode-text" class="active">Text Mode</button>
+                <button id="mode-todo">Todo Mode</button>
+            </div>
+        </header>
+
+        <div class="container">
+            <section id="text-section" class="input-section active">
+                <textarea id="text-input" placeholder="Enter your futuristic message here..."></textarea>
+            </section>
+            
+            <section id="todo-section" class="todo-section">
+                <h2>Todo List</h2>
+                <div class="todo-input">
+                    <input type="text" id="todo-text" placeholder="Add a mission objective...">
+                    <button id="add-todo">Add</button>
+                </div>
+                <ul id="todo-list">
+                    <!-- Todos will be added here -->
+                </ul>
+            </section>
+
+            <section class="controls-section">
+                <div class="controls">
+                    <div class="control-group">
+                        <label for="font-select">Font Style</label>
+                        <select id="font-select">
+                            <option value="'Orbitron', sans-serif">Orbitron (Futuristic)</option>
+                            <option value="'Roboto Mono', monospace">Roboto Mono (Terminal)</option>
+                            <option value="'Exo 2', sans-serif">Exo 2 (Sleek)</option>
+                            <option value="'Segoe UI', sans-serif">Modern Sans</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label for="theme-select">Color Theme</label>
+                        <select id="theme-select">
+                            <option value="cyberpunk">Cyberpunk</option>
+                            <option value="neon">Neon Night</option>
+                            <option value="midnight">Midnight</option>
+                            <option value="ocean">Ocean</option>
+                            <option value="forest">Forest</option>
+                            <option value="dark">Dark Classic</option>
+                            <option value="light">Light Minimal</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="save-btn" class="primary-btn">Generate & Set Wallpaper</button>
+            </section>
+        </div>
+        <canvas id="wallpaper-canvas" style="display: none;"></canvas>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>
